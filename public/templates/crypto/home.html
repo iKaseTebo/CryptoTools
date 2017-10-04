@@ -1,0 +1,100 @@
+<div class="container" >
+    <div id="BitcoinInput">
+        <input type="text" class="form-control" placeholder="0.00000001" ng-model="bitcoinInp">
+        <button class="btn btn-success" style="float:right;position:relative;bottom:38px;">Submit</button>
+    </div>
+    <div id="SatoshiTable" class="row" style="margin-top:10px;">
+        <div class="col-6">
+            <table class="table">
+                <tr>
+                    <th>Satoshi</th>
+                    <th>Bitcoin</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0.00000001 ฿</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>0.00000010 ฿</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>0.00000100 ฿</td>
+                </tr>
+                <tr>
+                    <td>1000</td>
+                    <td>0.00001000 ฿</td>
+                </tr>
+                <tr>
+                    <td>100,000</td>
+                    <td>0.00100000 ฿</td>
+                </tr>
+                <tr>
+                    <td>1,000,000</td>
+                    <td>0.01000000 ฿</td>
+                </tr>
+                <tr>
+                    <td>10,000,000</td>
+                    <td>0.10000000 ฿</td>
+                </tr>
+                <tr>
+                    <td>100,000,000</td>
+                    <td>1.00000000 ฿</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-6">
+            <table class="table">
+                <tr>
+                    <th>% Adjustment</th>
+                    <th>Bitcoin</th>
+                </tr>
+                <tr>
+                    <td class="positive"> 10% </td>
+                    <td class="positive"><< ( ((bitcoinInp|number:8)*.1 | number:8) -- (bitcoinInp|number:8)|number:8)  >> </td>
+                </tr>
+                <tr>
+                    <td class="positive"> 7.5% </td>
+                    <td class="positive"><<( ((bitcoinInp|number:8)*.075 | number:8) -- (bitcoinInp|number:8)|number:8) >> </td>
+                </tr>
+                <tr>
+                    <td class="positive"> 5% </td>
+                    <td class="positive"><< ( ((bitcoinInp|number:8)*.05 | number:8) -- (bitcoinInp|number:8)|number:8)  >> </td>
+                </tr>
+                <tr>
+                    <td class="positive"> 2.5% </td>
+                    <td class="positive"><< ( ((bitcoinInp|number:8)*.025 | number:8) -- (bitcoinInp|number:8)|number:8)  >> </td>
+                </tr>
+                <tr>
+                    <td class="positive"> 1% </td>
+                    <td class="positive"><< ( ((bitcoinInp|number:8)*.01 | number:8) -- (bitcoinInp|number:8)|number:8)  >></td>
+                </tr>
+                <tr>
+                    <th> 0% </th>
+                    <th> << bitcoinInp >> </th>
+                </tr>
+                <tr>
+                    <td class="negative"> -1% </td>
+                    <td class="negative"><< ( ((bitcoinInp|number:8)*-.01 | number:8) -- (bitcoinInp|number:8)|number:8) >> </td>
+                </tr>
+                <tr>
+                    <td class="negative"> -2.5% </td>
+                    <td class="negative"><< ( ((bitcoinInp|number:8)*-.025 | number:8) -- (bitcoinInp|number:8)|number:8) >> </td>
+                </tr>
+                <tr>
+                    <td class="negative"> -5% </td>
+                    <td class="negative"><< ( ((bitcoinInp|number:8)*-.05 | number:8) -- (bitcoinInp|number:8)|number:8) >> </td>
+                </tr>
+                <tr>
+                    <td class="negative"> -7.5% </td>
+                    <td class="negative"><< ( ((bitcoinInp|number:8)*-.075 | number:8) -- (bitcoinInp|number:8)|number:8) >> </td>
+                </tr>
+                <tr>
+                    <td class="negative"> -10% </td>
+                    <td class="negative"> << ( ((bitcoinInp|number:8)*-.1 | number:8) -- (bitcoinInp|number:8)|number:8) >> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

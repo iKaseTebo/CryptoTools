@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+var bowerDir = './bower_components/';
 
 elixir(function (mix) {
     mix.sass('app.scss');
@@ -9,5 +10,12 @@ elixir(function (mix) {
 
     mix.scripts([
         'controllers/*.js'
-    ], 'public/js/controllers.js')
+    ], 'public/js/controllers.js');
+
+    mix.scripts([
+        'angular/angular.js',
+        'angular-route/angular-route.js',
+        'angular-cookies/angular-cookies.js'
+    ], 'public/js/angular.js', bowerDir);
+
 });

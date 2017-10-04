@@ -1,0 +1,1 @@
+{"version":3,"sources":["indexController.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"controllers.js","sourcesContent":["myApp.controller('indexController', ['$scope', function ($scope) {\r\n    $scope.index = 'Welcome to the Crypto Index';\r\n\r\n}]);"]}
