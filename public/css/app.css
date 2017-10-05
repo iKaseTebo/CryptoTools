@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-.positive {
-  color: green;
+#btcUsd {
+  margin-bottom: 5px;
 }
 
-.negative {
-  color: red;
+.positive {
+  color: green;
 }
 
 /*# sourceMappingURL=app.css.map */

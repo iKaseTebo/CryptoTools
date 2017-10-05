@@ -1,9 +1,26 @@
-<div class="container" >
+<div class="container">
+    <div id="header" class="row">
+        <div id="btcUsd" class="col-6">
+            <h1>1 ฿ / $<< ( market | number:2 )>></h1>
+        </div>
+
+        <div class="col-6">
+            <div class="row" style="margin-top:5px;">
+                <div class="col-5">
+                   <input type="text" class="form-control" step=".00000001" placeholder="BTC" ng-model="btcExchange" ng-keyup="convert(1)">
+                </div>
+                <div class="col-1" style="padding-top: 5px;"><i class="fa fa-exchange" aria-hidden="true"></i> </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="USD" ng-model="usdExchange" ng-keyup="convert(2)">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="BitcoinInput">
         <input type="text" class="form-control" placeholder="0.00000001" ng-model="bitcoinInp">
-        <button class="btn btn-success" style="float:right;position:relative;bottom:38px;">Submit</button>
     </div>
-    <div id="SatoshiTable" class="row" style="margin-top:10px;">
+    <div id="btcTables" class="row" style="margin-top:10px; margin-bottom:10px;">
         <div class="col-6">
             <table class="table">
                 <tr>
@@ -97,4 +114,5 @@
             </table>
         </div>
     </div>
+
 </div>
