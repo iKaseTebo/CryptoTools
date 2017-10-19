@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,4 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-
+Route::get('/btc', function(){
+    $client = new Client();
+    $result = $client->request('GET', 'https://bittrex.com/api/v1.1/public/getmarketsummary?market=usdt-btc');
+    $body = json_decode($result->getBody());
+    $value = $body->result[0]->Last;
+    return $value;
+});
