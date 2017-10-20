@@ -17,37 +17,65 @@
         </div>
     </div>
 
-    <div id="BitcoinInput">
-        <input type="text" class="form-control" placeholder="0.00000001" ng-model="bitcoinInp">
+
+
+
+
+    <div class="row">
+
+        <div id="percentDiff" class="col-6">
+
+            <div class="row" style="margin-top:5px;">
+
+                <div class="col-4">
+                    <input type="text" class="form-control" step=".00000001" placeholder="Sell Value" ng-model="sellValue" ng-keyup="percentDiff(1)">
+                </div>
+                <div class="col-3" style="padding-top: 5px; font-weight:bold; text-align: center;"><< percent >>%</div>
+                <div class="col-4">
+                    <input type="text" class="form-control" step=".00000001" placeholder="Buy Value" ng-model="buyValue" ng-keyup="percentDiff(2)">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="BitcoinInput" class="col-6">
+            <input type="text" class="form-control" placeholder="0.00000001" ng-model="bitcoinInp">
+        </div>
+
     </div>
+
+
+
     <div id="btcTables" class="row" style="margin-top:10px; margin-bottom:10px;">
         <div class="col-6">
             <table class="table">
-                <tr>
-                    <th>Satoshi</th>
-                    <th>Bitcoin</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.00000001 ฿</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>0.00000010 ฿</td>
-                </tr>
-                <tr>
-                    <td>100</td>
-                    <td>0.00000100 ฿</td>
-                </tr>
-                <tr>
-                    <td>1000</td>
-                    <td>0.00001000 ฿</td>
-                </tr>
-                <tr>
-                    <td>100,000</td>
-                    <td>0.00100000 ฿</td>
-                </tr>
-                <tr>
+                    <tr>
+                        <th>Satoshi</th>
+                        <th>Bitcoin</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0.00000001 ฿</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>0.00000010 ฿</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>0.00000100 ฿</td>
+                    </tr>
+                    <tr>
+                        <td>1000</td>
+                        <td>0.00001000 ฿</td>
+                    </tr>
+                    <tr>
+                        <td>100,000</td>
+                        <td>0.00100000 ฿</td>
+                    </tr>
+                    <tr>
                     <td>1,000,000</td>
                     <td>0.01000000 ฿</td>
                 </tr>

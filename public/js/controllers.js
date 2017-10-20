@@ -1,6 +1,7 @@
 myApp.controller('indexController', ['$scope', '$http', '$filter', function ($scope, $http, $filter) {
     $scope.index = 'Welcome to the Crypto Index';
     $scope.btcExchange = '';
+    $scope.percent = 0;
     $http.get("/btc/").then(successCallback, errorCallback);
     setInterval(function(){
         $http.get("/btc/").then(successCallback, errorCallback)
@@ -26,6 +27,14 @@ myApp.controller('indexController', ['$scope', '$http', '$filter', function ($sc
             }
         }
 
+    };
+
+    $scope.percentDiff = function($i){
+      var buy = $scope.buyValue;
+      var sell = $scope.sellValue;
+      if(round((sell - buy ) / buy * 100, 2)) {
+          $scope.percent = round((sell - buy ) / buy * 100, 2);
+      }
     };
 
 
